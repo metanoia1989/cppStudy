@@ -13,7 +13,16 @@ int main()
          << "Add $1 to each account." << endl << "Now ";
     sam = sam + 1;
     sue = sue + 1;
-    
+    cout << "Sam has " << sam << " dollars and Sue has " << sue;
+    cout << " dollars deposited.\nPoor Sam!" << endl;
+
+    sam = ZERO;
+    sue = ZERO;
+    cout << "Sam has " << sam << " dollars and Sue has " << sue;
+    cout << " dollars deposited." << endl
+         << "Take $1 to each account." << endl << "Now ";
+    sam = sam - 1;
+    sue = sue - 1;
     cout << "Sam has " << sam << " dollars and Sue has " << sue;
     cout << " dollars deposited.\nPoor Sam!" << endl;
 }
