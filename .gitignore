@@ -1,2 +1,2 @@
-/CPPBASESTUDY/**/**.exe
-/CPPBASESTUDY/**.exe
+/CPPBASESTUDY/**/*.exe
+ipch/
