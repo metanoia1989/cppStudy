@@ -1,3 +1,4 @@
 /CPPBASESTUDY/**/*.exe
 ipch/
 OpenSource/
+*.exe

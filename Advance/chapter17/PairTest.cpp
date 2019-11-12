@@ -29,7 +29,5 @@ int main(int argc, char const *argv[])
         cout << "myOtherPair is not equal to myThirdPair" << endl;
     }
 
-
-
     return 0;
 }

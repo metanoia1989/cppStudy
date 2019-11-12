@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "*.js": "javascriptreact",
+        "*.tpl": "html",
+        "windows.h": "c"
+    }
+}
