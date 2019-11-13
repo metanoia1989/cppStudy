@@ -6,14 +6,13 @@
 
 using namespace std;
 
-class myIsDigit
-{
-public:
-    bool operator()(char c) const { return ::isdigit(c) != 0; }
-};
-
 bool isNumber(string_view str)
 {
+    class myIsDigit
+    {
+    public:
+        bool operator()(char c) const { return ::isdigit(c) != 0; }
+    };
     auto endIter = end(str);
     auto it = find_if(begin(str), endIter, not_fn(myIsDigit()));
     return (it == endIter);

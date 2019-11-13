@@ -5,6 +5,8 @@
         "*.wxs": "javascript",
         "*.js": "javascriptreact",
         "*.tpl": "html",
-        "windows.h": "c"
+        "windows.h": "c",
+        "iosfwd": "cpp",
+        "algorithm": "cpp"
     }
 }
