@@ -8,6 +8,8 @@
         "windows.h": "c",
         "iosfwd": "cpp",
         "algorithm": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "ios": "cpp",
+        "chrono": "cpp"
     }
 }
