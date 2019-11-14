@@ -7,6 +7,7 @@
         "*.tpl": "html",
         "windows.h": "c",
         "iosfwd": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iterator": "cpp"
     }
 }
