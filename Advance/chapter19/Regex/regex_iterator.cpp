@@ -15,10 +15,10 @@ int main(int argc, char const *argv[])
             break;
         }
 
-        const sregex_iterator end;
-        for (sregex_iterator iter(cbegin(str), cend(str), reg); iter != end; ++iter) {
-            cout << "\"" << (*iter)[0] << "\"" << endl;
-        }
+const sregex_iterator end;
+for (sregex_iterator iter(cbegin(str), cend(str), reg); iter != end; ++iter) {
+    cout << "\"" << (*iter)[0] << "\"" << endl;
+}
 
 
     }

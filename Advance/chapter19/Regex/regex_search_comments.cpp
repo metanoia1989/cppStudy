@@ -16,12 +16,12 @@ int main(int argc, char const *argv[])
             break;
         }
 
-        smatch m;   // 接收匹配的 match_result 对象元素 
-        if (regex_search(str, m, r)) {
-            cout << "Found comment '" << m[1] << "'" << endl;
-        } else {
-            cout << "Invalid date: " << str << endl;
-        }
+smatch m;   // 接收匹配的 match_result 对象元素 
+if (regex_search(str, m, r)) {
+    cout << "Found comment '" << m[1] << "'" << endl;
+} else {
+    cout << "Invalid date: " << str << endl;
+}
     }
 
     return 0;

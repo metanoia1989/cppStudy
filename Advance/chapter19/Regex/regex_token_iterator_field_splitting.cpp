@@ -15,11 +15,11 @@ int main(int argc, char const *argv[])
             break;
         }
 
-        const sregex_token_iterator end;
-        for (sregex_token_iterator iter(cbegin(str), cend(str), reg, -1);
-            iter != end; ++iter) {
-            cout << "\"" << *iter << "\"" << endl;
-        }
+const sregex_token_iterator end;
+for (sregex_token_iterator iter(cbegin(str), cend(str), reg, -1);
+    iter != end; ++iter) {
+    cout << "\"" << *iter << "\"" << endl;
+}
     }
     
 
