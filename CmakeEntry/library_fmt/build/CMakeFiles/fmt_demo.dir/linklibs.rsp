@@ -1,0 +1,1 @@
+F:/Program/msys64/mingw64/lib/libfmt.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

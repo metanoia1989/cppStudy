@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/WORKSPACE/C++/CmakeEntry/library_build02/lib/math/operations.hpp
+
+F:/WORKSPACE/C++/CmakeEntry/library_build02/main.cpp
+iostream
+-
+lib/math/operations.hpp
+F:/WORKSPACE/C++/CmakeEntry/library_build02/lib/math/operations.hpp
+
