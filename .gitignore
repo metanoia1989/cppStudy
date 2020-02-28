@@ -3,3 +3,6 @@ ipch/
 OpenSource/
 *.exe
 build/
+DataStructure/
+DesignPattern/
+cmake-build**/
