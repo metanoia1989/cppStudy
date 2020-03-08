@@ -2,6 +2,7 @@
 ipch/
 OpenSource/
 *.exe
+*.o
 build/
 DataStructure/
 DesignPattern/
