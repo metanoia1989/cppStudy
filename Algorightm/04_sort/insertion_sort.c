@@ -2,24 +2,25 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 10
+#define SIZE 10     // 数组大小
 
-// 冒泡排序法
-void BubbleSort(int *a, int len)
+// 插入排序
+void InsertionSort(int *a, int len)
 {
-    int i, j, k, temp; 
+    int perIndex, current;
 
-    for (i = 0; i < len - 1; i++) { // 外层循环
-        for (j = len - 1; j > i; j--)  { // 内层循环
-            if (a[j-1] > a[j]) {
-                temp = a[j-1];
-                a[j-1] = a[j];
-                a[j] = temp;
-            }
+    for (int i = 1; i < len; i++) {
+        current = a[i];
+        perIndex = i - 1;
+        while (perIndex >= 0 && current < a[perIndex]) {
+            a[perIndex+1] = a[perIndex];
+            perIndex--;
         }
-        printf("第%d步排序结果：", i); // 输出每步排序的结果
-        for (k = 0; k < len; k++)
-            printf("%d ", a[k]); 
+        a[perIndex+1] = current;
+
+        printf("第%d步排序结果：", i);
+        for (int h = 0; h < len; h++)
+            printf("%d ", a[h]);
         printf("\n");
     }
 }
@@ -37,7 +38,7 @@ int main(int argc, char const *argv[])
         printf("%d ", shuzu[i]);
     printf("\n");
 
-    BubbleSort(shuzu, SIZE); // 排序操作
+    InsertionSort(shuzu, SIZE); // 排序操作
 
     printf("排序之后的数组为：\n"); // 输出排序后的数组
     for (int i = 0; i < SIZE; i++)

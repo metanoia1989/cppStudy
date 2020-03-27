@@ -2,24 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 10
+#define SIZE 10 // 数组大小
 
-// 冒泡排序法
-void BubbleSort(int *a, int len)
+// 选择法排序
+void SelectionSort(int *a, int len)
 {
-    int i, j, k, temp; 
+    int i, j, k, h;
+    int temp; // 交换临时变量
 
-    for (i = 0; i < len - 1; i++) { // 外层循环
-        for (j = len - 1; j > i; j--)  { // 内层循环
-            if (a[j-1] > a[j]) {
-                temp = a[j-1];
-                a[j-1] = a[j];
-                a[j] = temp;
-            }
+    for (i = 0; i < len - 1; i++) {
+        k = i;
+        for (j = i + 1; j < len; j++) {
+            if (a[j] < a[k])
+                k = j;
+        }
+        if (k != i) { // 交换 k 是最小数的索引
+            temp = a[i];
+            a[i] = a[k];
+            a[k] = temp;
         }
         printf("第%d步排序结果：", i); // 输出每步排序的结果
-        for (k = 0; k < len; k++)
-            printf("%d ", a[k]); 
+        for (h = 0; h < len; h++)
+            printf("%d ", a[h]);
         printf("\n");
     }
 }
@@ -37,7 +41,7 @@ int main(int argc, char const *argv[])
         printf("%d ", shuzu[i]);
     printf("\n");
 
-    BubbleSort(shuzu, SIZE); // 排序操作
+    SelectionSort(shuzu, SIZE); // 排序操作
 
     printf("排序之后的数组为：\n"); // 输出排序后的数组
     for (int i = 0; i < SIZE; i++)
