@@ -1,2 +1,0 @@
-F:/WORKSPACE/C++/CmakeEntry/cmake_global_var/build/CMakeFiles/rebuild_cache.dir
-F:/WORKSPACE/C++/CmakeEntry/cmake_global_var/build/CMakeFiles/edit_cache.dir

@@ -1,3 +1,0 @@
-F:/WORKSPACE/C++/CmakeEntry/define_macro/build/CMakeFiles/rebuild_cache.dir
-F:/WORKSPACE/C++/CmakeEntry/define_macro/build/CMakeFiles/cmake_hello.dir
-F:/WORKSPACE/C++/CmakeEntry/define_macro/build/CMakeFiles/edit_cache.dir
