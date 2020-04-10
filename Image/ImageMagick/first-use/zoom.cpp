@@ -10,9 +10,10 @@ int main(int argc, char const *argv[])
     Magick::Image origin(picPath);
 
     Magick::Image zoomImg(origin);
-    size_t width = zoomImg.rows(), height = zoomImg.columns();
-    Magick::Geometry zoomInSize(width * 0.5,  height * 0.5);
-    zoomImg.zoom(zoomInSize);
+    size_t width = zoomImg.columns(), height = zoomImg.rows();
+    // Magick::Geometry zoomInSize(width * 0.5,  height * 0.5);
+    // zoomImg.zoom(zoomInSize);
+    zoomImg.zoom("50%");
     zoomImg.write("pic_zoom_0_5.jpg");
 
     Magick::Geometry zoomOutSize(width * 1.5, height * 1.5);

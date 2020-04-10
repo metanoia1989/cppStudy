@@ -13,6 +13,6 @@ target_compile_definitions(magick-test PUBLIC
     -DMAGICKCORE_QUANTUM_DEPTH=16
     -DMAGICKCORE_HDRI_ENABLE=0
 )
-find_package(ImageMagick COMPONENTS Magick++)
+find_package(ImageMagick COMPONENTS Magick++ MagickCore)
 target_include_directories(magick-test PUBLIC ${ImageMagick_INCLUDE_DIRS})
 target_link_libraries(magick-test PUBLIC ${ImageMagick_LIBRARIES})
