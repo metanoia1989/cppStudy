@@ -2,8 +2,11 @@
 ipch/
 OpenSource/
 *.exe
+*.obj
 *.o
 build/
 DataStructure/
 DesignPattern/
 cmake-build**/
+.vs/
+.vscode/
