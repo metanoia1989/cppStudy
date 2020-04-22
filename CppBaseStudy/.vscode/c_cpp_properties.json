@@ -10,8 +10,8 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "gcc-x64",
-            "compilerPath": "F:/Program/msys64/mingw64/bin/g++.exe",
+            "intelliSenseMode": "msvc-x32",
+            "compilerPath": "F:/Program/VisualStudio/CommunityIDE/VC/Tools/MSVC/14.22.27905/bin/HostX86/x86/cl.exe",
             "browse": {
                 "path": [
                     "${workspaceFolder}"
