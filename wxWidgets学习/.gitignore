@@ -1,0 +1,15 @@
+/CPPBASESTUDY/**/*.exe
+ipch/
+OpenSource/
+*.exe
+*.obj
+*.o
+build/
+DataStructure/
+DesignPattern/
+cmake-build**/
+.vs/
+
+*.gch
+
+.xmake
