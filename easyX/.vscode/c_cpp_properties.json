@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/**",
+                "D:/Program/VisualStudioCommunity2019/IDE/VC/Auxiliary/VS/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "D:/Program/VisualStudioCommunity2019/IDE/VC/Tools/MSVC/14.27.29110/bin/Hostx64/x64/cl.exe"
+        }
+    ],
+    "version": 4
+}
