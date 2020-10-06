@@ -5,8 +5,8 @@
             "includePath": [
                 "${default}",
                 "D:/Program/msys64/mingw64/include/wx-3.1",   
-                "D:/Program/msys64/mingw64/include/**",
-                "D:/Program/msys64/mingw64/include/c++/10.2.0/**"
+                "D:/Program/msys64/mingw64/include/",
+                "D:/Program/msys64/mingw64/include/c++/10.2.0/"
             ],
             "defines": [
                 "_DEBUG",
