@@ -23,6 +23,7 @@ add_ldflags(
     "-lwx_baseud-3.1",
     { force = true }
 )
+add_cxxflags("-Wall")
 
 target("menu")
     set_kind("binary")
@@ -31,3 +32,17 @@ target("menu")
 target("submenu")
     set_kind("binary")
     add_files("submenu/*.cpp")
+
+target("toolbar")
+    set_kind("binary")
+    after_build(function (target)
+        local full_path = target:targetfile()
+        local dir_path = string.gsub(full_path, "(.*[/|\\])(.*)", "%1")
+        os.cp("$(projectdir)/toolbar/*.png", dir_path)
+    end)
+    on_clean(function (target) 
+        local full_path = target:targetfile()
+        local dir_path = string.gsub(full_path, "(.*[/|\\])(.*)", "%1")
+        os.rm(string.format("%s*.png", dir_path))
+    end)
+    add_files("toolbar/*.cpp")
