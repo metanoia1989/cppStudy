@@ -48,3 +48,27 @@ add_cxxflags("-Wall")
 target("absolute")
     set_kind("binary")
     add_files("absolute/*.cpp")
+
+target("sizer")
+    set_kind("binary")
+    add_files("sizer/*.cpp")
+
+target("boxsizer")
+    set_kind("binary")
+    add_files("boxsizer/*.cpp")
+
+target("align")
+    set_kind("binary")
+    add_files("align/*.cpp")
+
+target("gotoclass")
+    set_kind("binary")
+    add_files("gotoclass/*.cpp")
+
+target("gridsizer")
+    set_kind("binary")
+    add_files("gridsizer/*.cpp")
+
+target("flexgridsizer")
+    set_kind("binary")
+    add_files("flexgridsizer/*.cpp")

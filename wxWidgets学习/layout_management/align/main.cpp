@@ -1,12 +1,12 @@
 #include "main.h"
-#include "sizer.h"
+#include "align.h"
 
 wxIMPLEMENT_APP(MyApp);
 
 bool MyApp::OnInit() 
 {
-    auto *sizer = new Sizer(wxT("Sizer")); 
-    sizer->Show(true);
+    auto *align = new Align(wxT("Align")); 
+    align->Show(true);
     
     return true;
 }

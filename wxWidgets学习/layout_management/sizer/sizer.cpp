@@ -3,8 +3,6 @@
 Sizer::Sizer(const wxString& title) 
     : wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, wxSize(350, 250))
 {
-    wxPanel *panel = new wxPanel(this, wxID_ANY); 
-    
     menuBar = new wxMenuBar;
     file = new wxMenu;
     edit = new wxMenu;
@@ -15,6 +13,6 @@ Sizer::Sizer(const wxString& title)
     
     SetMenuBar(menuBar);
     
-    textCtrl = new wxTextCtrl(panel, wxID_ANY, wxT(""), wxDefaultPosition,
+    textCtrl = new wxTextCtrl(this, wxID_ANY, wxT(""), wxPoint(-1, -1),
         wxSize(250, 150), wxTE_MULTILINE);
 }
