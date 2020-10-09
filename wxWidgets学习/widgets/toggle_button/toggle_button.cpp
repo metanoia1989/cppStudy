@@ -26,38 +26,42 @@ ToggleButton::ToggleButton(const wxString& title)
 
 void ToggleButton::OnToggleRed(wxCommandEvent& WXUNUSED(event)) 
 {
+    unsigned char red = colour->Red();
     unsigned char green = colour->Green();    
     unsigned char blue = colour->Blue();    
-    if (colour->Red()) {
+    if (red) {
         colour->Set(0, green, blue);
     } else {
         colour->Set(255, green, blue);
-    #include <iostream>
-    std::cout << "测试" << std::endl;
     }
-    m_panel->SetBackgroundColour(colour->GetAsString());
+    m_panel->SetBackgroundColour(*colour);
+    m_panel->Refresh();
 }
 
 void ToggleButton::OnToggleGreen(wxCommandEvent& event) 
 {
-    unsigned char red = colour->Red();    
+    unsigned char red = colour->Red();
+    unsigned char green = colour->Green();    
     unsigned char blue = colour->Blue();    
-    if (colour->Green()) {
+    if (green) {
         colour->Set(red, 0, blue);
     } else {
         colour->Set(red, 255, blue);
     }
     m_panel->SetBackgroundColour(colour->GetAsString());
+    m_panel->Refresh();
 }
 
 void ToggleButton::OnToggleBlue(wxCommandEvent& event) 
 {
-    unsigned char red = colour->Red();    
-    unsigned char green = colour->Blue();    
-    if (colour->Blue()) {
+    unsigned char red = colour->Red();
+    unsigned char green = colour->Green();    
+    unsigned char blue = colour->Blue();    
+    if (blue) {
         colour->Set(red, green, 0);
     } else {
         colour->Set(red, green, 255);
     }
     m_panel->SetBackgroundColour(colour->GetAsString());
+    m_panel->Refresh();
 }

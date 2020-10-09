@@ -66,3 +66,16 @@ target("bitmap")
 target("toggle")
     set_kind("binary")
     add_files("toggle_button/*.cpp")
+
+
+target("staticline")
+    set_kind("binary")
+    add_files("static_line/*.cpp")
+
+target("statictext")
+    set_kind("binary")
+    add_files("static_text/*.cpp")
+
+target("slider")
+    set_kind("binary")
+    add_files("slider/*.cpp")
