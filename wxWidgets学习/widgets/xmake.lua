@@ -79,3 +79,7 @@ target("statictext")
 target("slider")
     set_kind("binary")
     add_files("slider/*.cpp")
+
+target("listbox")
+    set_kind("binary")
+    add_files("listbox/*.cpp")
