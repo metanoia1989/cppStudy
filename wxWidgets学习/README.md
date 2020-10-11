@@ -8,8 +8,23 @@ C++的文档生成、包管理、单元测试集成，依旧停留在二十年�
 绝对布局，直接使用 wxDefaultPosition    
 
 Sizer 布局组件：
+
 * wxBoxSizer
 * wxStaticBoxSizer
 * wxGridSizer
 * wxFlexGridSizer
 * wxGridBagSizer
+
+## Graphics Device Interface
+wxDC - device context object
+
+* wxBufferedDC
+* wxBufferedPaintDC
+* wxPostScriptDC
+* wxMemoryDC
+* wxPrinterDC
+* wxScreenDC
+* wxClientDC
+* wxPaintDC
+* wxWindowDC
+
