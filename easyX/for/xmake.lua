@@ -44,15 +44,14 @@ add_links("Gdi32", "User32", "shell32", "Ole32")
 add_options("home")
 add_options("company")
 
-target("sample")
-    set_kind("binary")
-    add_files("simple.cpp")
-
-
-target("ten")
+target("line")
     set_kind("binary")
     add_files("ten_line.cpp")
 
-target("draw")
+target("gradual")
     set_kind("binary")
-    add_files("draw.cpp")
+    add_files("gradual_line.cpp")
+
+target("crisscross")
+    set_kind("binary")
+    add_files("crisscross_line.cpp")
