@@ -8,6 +8,7 @@ vistual studio太笨重了，我不想用。使用msvc+xmake进行编译，配�
 
 编译这个easyX必须要msvc编译器，刚才犯傻配置了 `xmake f -p mingw` =_= 编译了半天，最后还报错。   
 
+# API函数
 [初始化函数]        
 initgraph(width, height)        
 closegraph()        
@@ -48,3 +49,17 @@ r / g / b 分别表示红色、绿色、蓝色，范围都是 0~255。例如，R
 
 [延时语句]  
 这个很简单，Sleep(n) 就可以表示 n 毫秒的延时。例如延时 3 秒，可以用 Sleep(3000);        
+
+# 扩展作业
+[for循环的]     
+1. 画围棋棋盘
+2. 画中国象棋的棋盘
+3. 画国际象棋的棋盘，并且实现区块颜色填充
+
+画中国象棋棋盘的分析，主体部分的横线、竖线很好解决。    
+帅所在的几个斜线也很好解决，用line可以搞定。    
+linerel、lineto好像更方便，点可以变。       
+moverel、moveto移动点，并且不画线。     
+setorigin 设置坐标原点，setaspectratio 设置缩放因子，用来放大缩小棋盘。         
+drawtext 用来输出文字，重点是文字加粗，字体为隶书。     
+settextstyle 可以设置字体样式。     
