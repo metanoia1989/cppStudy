@@ -5,6 +5,7 @@
             "includePath": [
                 "${default}",
                 "${workspaceFolder}/**",
+                "D:/Program/VistualStudio/IDE/VC/Auxiliary/VS/include",
                 "D:/Program/VisualStudioCommunity2019/IDE/VC/Auxiliary/VS/include"
             ],
             "defines": [

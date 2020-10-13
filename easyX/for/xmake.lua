@@ -41,8 +41,11 @@ option_end()
 add_links("EasyXa")
 add_links("Gdi32", "User32", "shell32", "Ole32")
 
-add_options("home")
-add_options("company")
+if has_config("company") then
+    add_options("company")
+elseif has_config("home") then
+    add_options("home")
+end
 
 target("line")
     set_kind("binary")

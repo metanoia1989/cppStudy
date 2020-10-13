@@ -19,7 +19,7 @@ option("company")
 option_end()
 
 option("home")
-    set_default(true)
+    set_default(false)
     set_showmenu(true)
     set_description("家里的easyX配置")
     add_includedirs(
@@ -41,8 +41,12 @@ option_end()
 add_links("EasyXa")
 add_links("Gdi32", "User32", "shell32", "Ole32")
 
-add_options("home")
-add_options("company")
+
+if has_config("company") then
+    add_options("company")
+elseif has_config("home") then
+    add_options("home")
+end
 
 target("sample")
     set_kind("binary")
