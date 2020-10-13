@@ -60,3 +60,7 @@ target("ten")
 target("draw")
     set_kind("binary")
     add_files("draw.cpp")
+
+target("moveto")
+    set_kind("binary")
+    add_files("moveto.cpp")

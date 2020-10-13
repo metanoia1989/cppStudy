@@ -1,4 +1,6 @@
 #include <graphics.h>
+#include <string>
+#include <stdlib.h>
 
 //***********************************************************
 // 绘制中国象棋的棋盘
@@ -17,7 +19,85 @@
 /**
  * 象棋棋子，传入棋子文字以及颜色
  */ 
-class chessman
+class Chessman
 {
+public:
+    Chessman(std::string chessName) 
+        : m_chessName(chessName) {}
+                                    
+    /**
+     * 绘制棋子，边框+文字，但是这个图形库的绘制都是以整个棋盘的左上角为坐标的
+     * 单个棋子要怎么处理呢？先设置中心坐标，然后再这个坐标上进行绘制吗？
+     * 感觉有点难，算了，先弄简单的好了，只是绘制棋盘。 
+     */ 
+    void draw() 
+    {
+        
+    }
+        
+private:
+    std::string m_chessName;
+};
+
+/**
+ * 棋盘
+ * 每个单元格 50x50
+ * 宽高 400x450 
+ * 外边距 10 
+ */ 
+class ChessBoard
+{
+public:
+    /**
+     * 绘制象棋棋盘
+     */ 
+    void draw()
+    {
+        initgraph(440, 490);
+        fillrectangle(10, 10, 430, 480);
+        drawCell();
+        drawCrossLine();
+        
+        system("pause");
+        closegraph();
+    }
+    
+    /**
+     * 绘制单元格
+     */ 
+    void drawCell()
+    {
+        setlinecolor(BLACK);
+        rectangle(20, 20, 420, 470);
+        // 画竖线
+        for (int x = 20; x <= 420; x += 50) {
+            line(x, 20, x, 220); 
+            line(x, 270, x, 470); 
+        } 
+        // 画横线
+        for (int y = 20; y <= 470; y += 50) {
+            line(20, y, 420, y); 
+        } 
+    }
+    
+    /**
+     * 绘制帅所在田字框的交叉线
+     */ 
+    void drawCrossLine()
+    {
+        line(170, 20, 270, 120);
+        line(170, 120, 270, 20);
+
+        line(170, 370, 270, 470);
+        line(170, 470, 270, 370);
+    }
 
 };
+
+int main(int argc, char const *argv[])
+{
+    auto chess = ChessBoard();
+    chess.draw();
+
+    return 0;
+}

@@ -19,7 +19,7 @@ option("company")
 option_end()
 
 option("home")
-    set_default(true)
+    set_default(false)
     set_showmenu(true)
     set_description("家里的easyX配置")
     add_includedirs(
@@ -58,3 +58,7 @@ target("gradual")
 target("crisscross")
     set_kind("binary")
     add_files("crisscross_line.cpp")
+
+target("chess_cn")
+    set_kind("binary")
+    add_files("chinese_chess.cpp")
