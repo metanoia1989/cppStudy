@@ -49,23 +49,20 @@ elseif has_config("home") then
     add_options("home")
 end
 
-target("line")
+target("load")
     set_kind("binary")
-    add_files("ten_line.cpp")
+    add_files("load_image.cpp")
+    after_build(function (target)
+        local full_path = target:targetfile()
+        local dir_path = string.gsub(full_path, "(.*[/|\\])(.*)", "%1")
+        os.cp("$(projectdir)/*.jpg", dir_path)
+    end)
+    on_clean(function (target) 
+        local full_path = target:targetfile()
+        local dir_path = string.gsub(full_path, "(.*[/|\\])(.*)", "%1")
+        os.rm(string.format("%s*.jpg", dir_path))
+    end)
 
-target("gradual")
+target("get")
     set_kind("binary")
-    add_files("gradual_line.cpp")
-
-target("crisscross")
-    set_kind("binary")
-    add_files("crisscross_line.cpp")
-
-target("chess_cn")
-    set_kind("binary")
-    add_files("chinese_chess.cpp")
-
-target("chess_int")
-    set_kind("binary")
-    add_files("international_chess.cpp")
-    add_files("Resource.rc")
+    add_files("get_image.cpp")

@@ -1,6 +1,7 @@
 #include <graphics.h>
 #include <string>
 #include <stdlib.h>
+#include <iostream>
 
 //***********************************************************
 // 绘制中国象棋的棋盘
@@ -129,9 +130,9 @@ public:
     void drawText()
     {
         RECT rect = { 85, 220, 170, 270 };     
-        wchar_t str[] = L"楚河";
-        // outtextxy(100, 100, str);
-        // drawtext(str, &rect, DT_CENTER | DT_VCENTER);
+        // outtextxy(100, 100, _T("楚河"));
+        drawtext(L"中文", &rect, DT_CENTER | DT_VCENTER);
+        std::cout << UNICODE << std::endl;
     }
 
 };

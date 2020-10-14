@@ -1,0 +1,91 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_PNG1                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\bishop1.png"
+
+IDB_PNG2                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\bishop2.png"
+
+IDB_PNG3                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\king1.png"
+
+IDB_PNG4                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\king2.png"
+
+IDB_PNG5                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\knight1.png"
+
+IDB_PNG6                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\knight2.png"
+
+IDB_PNG7                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\pawn1.png"
+
+IDB_PNG8                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\pawn2.png"
+
+IDB_PNG9                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\queue1.png"
+
+IDB_PNG10               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\queue2.png"
+
+IDB_PNG11               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\rook1.png"
+
+IDB_PNG12               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\rook2.png"
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

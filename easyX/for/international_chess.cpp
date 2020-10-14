@@ -1,5 +1,7 @@
 #include <graphics.h>
+#include "Resource.h"
 #include <stdlib.h>
+#include <iostream>
 
 //******************************************************************
 // 绘制国际象棋
@@ -17,6 +19,7 @@ public:
     {
         initgraph(400, 400);
         drawCell();    
+        loadimage(NULL, _T("IMAGE"), MAKEINTRESOURCE(IDB_PNG1));
         system("pause");
         closegraph();
     }
