@@ -1,4 +1,5 @@
 add_rules("mode.debug", "mode.release")
+set_languages("c99", "c++17")
 
 option("company")
     set_default(false)
@@ -36,9 +37,9 @@ option("home")
     )
 option_end()
 
--- add_defines("UNICODE")
--- add_links("EasyXw")
-add_links("EasyXa")
+add_defines("UNICODE")
+add_links("EasyXw")
+-- add_links("EasyXa")
 add_links("Gdi32", "User32", "shell32", "Ole32")
 
 if has_config("company") then

@@ -1,5 +1,6 @@
 #include <graphics.h>
 #include <string>
+#include <utility>
 #include <stdlib.h>
 
 //***********************************************************
@@ -55,8 +56,11 @@ public:
     {
         initgraph(440, 490);
         fillrectangle(10, 10, 430, 480);
+        setlinecolor(BLACK);
         drawCell();
         drawCrossLine();
+        drawFocusMask();
+        drawText();
         
         system("pause");
         closegraph();
@@ -67,7 +71,6 @@ public:
      */ 
     void drawCell()
     {
-        setlinecolor(BLACK);
         rectangle(20, 20, 420, 470);
         // 画竖线
         for (int x = 20; x <= 420; x += 50) {
@@ -90,6 +93,68 @@ public:
 
         line(170, 370, 270, 470);
         line(170, 470, 270, 370);
+    }
+    
+    /**
+     * 绘制卒和炮所在点的聚焦标志
+     */ 
+    void drawFocusMask()
+    {
+        int w = 50 * 0.1;
+        auto drawLeftMask = [w](int x, int y){
+            // 上边的折线
+            line(x-1.5*w, y+0.5*w, x-0.5*w, y+0.5*w); 
+            line(x-0.5*w, y+0.5*w, x-0.5*w, y+1.5*w);
+            // 下边的折线
+            line(x-1.5*w, y-0.5*w, x-0.5*w, y-0.5*w); 
+            line(x-0.5*w, y-0.5*w, x-0.5*w, y-1.5*w);
+        };
+        auto drawRightMask = [w](int x, int y){
+            // 上边的折线
+            line(x+1.5*w, y+0.5*w, x+0.5*w, y+0.5*w); 
+            line(x+0.5*w, y+0.5*w, x+0.5*w, y+1.5*w);
+            // 下边的折线
+            line(x+1.5*w, y-0.5*w, x+0.5*w, y-0.5*w); 
+            line(x+0.5*w, y-0.5*w, x+0.5*w, y-1.5*w);
+        };
+        auto drawFullMask = [w, drawLeftMask, drawRightMask](int x, int y) {
+            drawLeftMask(x, y);
+            drawRightMask(x, y);
+        };
+        int fullPoints [10][2] = {
+            { 70, 120 }, { 370, 120 }, 
+            { 120, 170 }, { 220, 170 }, { 320, 170 }, 
+            { 70, 370 }, { 370, 370 }, 
+            { 120, 320 }, { 220, 320 }, { 320, 320 }, 
+        };
+        int leftPoints[2][2] = {
+            { 420, 170 }, 
+            { 420, 320 }
+        };
+        int rightPoints[2][2] = {
+            { 20, 170 }, 
+            { 20, 320 }
+        };
+        for (auto &point : fullPoints) {
+            drawFullMask(point[0], point[1]); 
+        }
+        for (auto &point : leftPoints) {
+            drawLeftMask(point[0], point[1]); 
+        }
+        for (auto &point : rightPoints) {
+            drawRightMask(point[0], point[1]); 
+        }
+    }
+    
+    /**
+     * 绘制中间的文字
+     */ 
+    void drawText()
+    {
+        RECT rect = { 85, 220, 170, 270 };     
+        wchar_t str[] = L"楚河";
+        // outtextxy(100, 100, str);
+        // drawtext(str, &rect, DT_CENTER | DT_VCENTER);
     }
 
 };
