@@ -63,3 +63,7 @@ target("crisscross")
 target("chess_cn")
     set_kind("binary")
     add_files("chinese_chess.cpp")
+
+target("chess_int")
+    set_kind("binary")
+    add_files("international_chess.cpp")

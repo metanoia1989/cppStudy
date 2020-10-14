@@ -1,6 +1,5 @@
 #include <graphics.h>
 #include <string>
-#include <utility>
 #include <stdlib.h>
 
 //***********************************************************
@@ -17,28 +16,6 @@
 // 加上蹩脚机制，判断能走的点，哈哈，有点感觉了 
 //***********************************************************
 
-/**
- * 象棋棋子，传入棋子文字以及颜色
- */ 
-class Chessman
-{
-public:
-    Chessman(std::string chessName) 
-        : m_chessName(chessName) {}
-                                    
-    /**
-     * 绘制棋子，边框+文字，但是这个图形库的绘制都是以整个棋盘的左上角为坐标的
-     * 单个棋子要怎么处理呢？先设置中心坐标，然后再这个坐标上进行绘制吗？
-     * 感觉有点难，算了，先弄简单的好了，只是绘制棋盘。 
-     */ 
-    void draw() 
-    {
-        
-    }
-        
-private:
-    std::string m_chessName;
-};
 
 /**
  * 棋盘
@@ -157,6 +134,29 @@ public:
         // drawtext(str, &rect, DT_CENTER | DT_VCENTER);
     }
 
+};
+
+/**
+ * 象棋棋子，传入棋子文字以及颜色
+ */ 
+class Chessman
+{
+public:
+    Chessman(std::string chessName) 
+        : m_chessName(chessName) {}
+                                    
+    /**
+     * 绘制棋子，边框+文字，但是这个图形库的绘制都是以整个棋盘的左上角为坐标的
+     * 单个棋子要怎么处理呢？先设置中心坐标，然后再这个坐标上进行绘制吗？
+     * 感觉有点难，算了，先弄简单的好了，只是绘制棋盘。 
+     */ 
+    void draw() 
+    {
+        
+    }
+        
+private:
+    std::string m_chessName;
 };
 
 int main(int argc, char const *argv[])

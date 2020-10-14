@@ -62,4 +62,18 @@ linerel、lineto好像更方便，点可以变。
 moverel、moveto移动点，并且不画线。     
 setorigin 设置坐标原点，setaspectratio 设置缩放因子，用来放大缩小棋盘。         
 drawtext 用来输出文字，重点是文字加粗，字体为隶书。     
-settextstyle 可以设置字体样式。     
+settextstyle 可以设置字体样式。 
+
+国际象棋开源APP https://github.com/evijit/material-chess-android
+
+国际象棋/规则 https://zh.m.wikibooks.org/zh-hans/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B/%E8%A7%84%E5%88%99
+
+国际象棋棋子名称        
+国际象棋的棋盘由64个黑白相间的八乘八网格组成，分为1至8行及A至H列。      
+每位玩家开局时各有16个棋子：一王、一后、两车、两马、两象和八兵，各具不同功能与走法。        
+king 国王       
+queue 皇后      
+rook 车     
+knight 马       
+bisshop 象      
+pawn 兵     
