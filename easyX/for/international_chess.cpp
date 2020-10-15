@@ -18,8 +18,10 @@ public:
     void draw()
     {
         initgraph(400, 400);
+
         drawCell();    
-        loadimage(NULL, _T("IMAGE"), MAKEINTRESOURCE(IDB_PNG1));
+        drawChessMan();
+
         system("pause");
         closegraph();
     }
@@ -43,6 +45,20 @@ public:
                 fillrectangle(x, y, x+50, y+50);
             } 
         } 
+    }
+    
+    /**
+     * 绘制棋子
+     */ 
+    void drawChessMan()
+    {
+        IMAGE img;
+
+        // 绘制兵棋
+        loadimage(&img, _T("IMAGE"), MAKEINTRESOURCE(CHESS_PAWN1), 50, 50); 
+        for (int x = 0; x < 400; x+=50) {
+            putimage(x, 50, &img);
+        }
     }
 };
 

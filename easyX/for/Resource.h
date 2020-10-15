@@ -2,18 +2,18 @@
 // Microsoft Visual C++ 生成的包含文件。
 // 供 Resource.rc 使用
 //
-#define IDB_PNG1                        101
-#define IDB_PNG2                        102
-#define IDB_PNG3                        103
-#define IDB_PNG4                        104
-#define IDB_PNG5                        105
-#define IDB_PNG6                        106
-#define IDB_PNG7                        107
-#define IDB_PNG8                        108
-#define IDB_PNG9                        109
-#define IDB_PNG10                       110
-#define IDB_PNG11                       111
-#define IDB_PNG12                       112
+#define CHESS_BISHOP1                      101
+#define CHESS_BISHOP2                      102
+#define CHESS_KING1                        103
+#define CHESS_KING2                        104
+#define CHESS_KNIGHT1                      105
+#define CHESS_KNIGHT2                      106
+#define CHESS_PAWN1                        107
+#define CHESS_PAWN2                        108
+#define CHESS_QUEUE1                       109
+#define CHESS_QUEUE2                       110
+#define CHESS_ROOK1                        111
+#define CHESS_ROOK2                        112
 
 // Next default values for new objects
 // 

@@ -50,29 +50,29 @@ END
 // PNG
 //
 
-IDB_PNG1                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\bishop1.png"
+CHESS_BISHOP1                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\bishop1.png"
 
-IDB_PNG2                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\bishop2.png"
+CHESS_BISHOP2                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\bishop2.png"
 
-IDB_PNG3                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\king1.png"
+CHESS_KING1                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\king1.png"
 
-IDB_PNG4                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\king2.png"
+CHESS_KING2                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\king2.png"
 
-IDB_PNG5                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\knight1.png"
+CHESS_KNIGHT1                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\knight1.png"
 
-IDB_PNG6                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\knight2.png"
+CHESS_KNIGHT2                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\knight2.png"
 
-IDB_PNG7                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\pawn1.png"
+CHESS_PAWN1                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\pawn1.png"
 
-IDB_PNG8                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\pawn2.png"
+CHESS_PAWN2                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\pawn2.png"
 
-IDB_PNG9                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\queue1.png"
+CHESS_QUEUE1                IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\queue1.png"
 
-IDB_PNG10               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\queue2.png"
+CHESS_QUEUE2               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\queue2.png"
 
-IDB_PNG11               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\rook1.png"
+CHESS_ROOK1               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\rook1.png"
 
-IDB_PNG12               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\rook2.png"
+CHESS_ROOK2               IMAGE                     "D:\\WorkSpace\\cppStudy\\easyX\\for\\chess\\rook2.png"
 
 #endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
