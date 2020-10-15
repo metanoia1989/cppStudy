@@ -68,6 +68,7 @@ target("chess_cn")
 target("chess_int")
     set_kind("binary")
     add_files("international_chess.cpp")
+    add_links("MSIMG32")
     if has_config("company") then
         add_files("Resource.com.rc")
     elseif has_config("home") then
