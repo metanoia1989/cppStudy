@@ -77,3 +77,6 @@ rook 车
 knight 马       
 bisshop 象      
 pawn 兵     
+
+
+透明背景会变黑，要使用透明贴图。

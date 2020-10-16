@@ -14,9 +14,6 @@ big_image::big_image(DBlurEffectWidget *parent) : DBlurEffectWidget(parent)
     setRadius(0);
     setMaskAlpha(60);
     setMaskColor(QColor("#000000"));
-
-
-
 }
 
 void big_image::mousePressEvent(QMouseEvent *)
