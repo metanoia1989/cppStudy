@@ -120,8 +120,6 @@ void transparentimage(IMAGE *dstimg, int x, int y, IMAGE *srcimg)
     AlphaBlend(dstDC, x, y, w, h, srcDC, 0, 0, w, h, bf);
 }
 
-
-
 int main(int argc, char const *argv[])
 {
     auto chess = ChessBoard();
