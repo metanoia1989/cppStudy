@@ -80,3 +80,15 @@ pawn 兵
 
 
 透明背景会变黑，要使用透明贴图。
+
+* WM_MOUSEMOVE     鼠标移动消息
+* WM_MOUSEWHEEL    鼠标滚轮拨动消息
+* WM_LBUTTONDOWN   左键按下消息
+* WM_LBUTTONUP     左键弹起消息
+* WM_LBUTTONDBLCLK 左键双击消息
+* WM_MBUTTONDOWN   中键按下消息
+* WM_MBUTTONUP     中键弹起消息
+* WM_MBUTTONDBLCLK 中键双击消息
+* WM_RBUTTONDOWN   右键按下消息
+* WM_RBUTTONUP     右键弹起消息
+* WM_RBUTTONDBLCLK 右键双击消息
