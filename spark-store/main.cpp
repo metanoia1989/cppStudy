@@ -1,20 +1,20 @@
 #include <DApplication>
 #include <DWidgetUtil>  //Dtk::Widget::moveToCenter(&w); 要调用它，就得引用DWidgetUtil
 #include <QDesktopWidget>
-#include <widget.h>
 #include <QTranslator>
 #include <DAboutDialog>
+#include "widget.h"
 DWIDGET_USE_NAMESPACE
 int main(int argc, char *argv[])
 {
     DApplication::loadDXcbPlugin();  //让bar处在标题栏中
     DApplication a(argc, argv);
+    DAboutDialog dialog;
     a.setAttribute(Qt::AA_UseHighDpiPixmaps);
     a.loadTranslator();//载入翻译
     a.setAboutDialog(&dialog);
     
     /* 关于我们弹窗 START */ 
-    DAboutDialog dialog;
     dialog.setLicense(QObject::tr("We publish this program under GPL V3"));
     dialog.setVersion(DApplication::buildVersion("Version 2.0.2.3"));
     dialog.setAcknowledgementVisible(true);

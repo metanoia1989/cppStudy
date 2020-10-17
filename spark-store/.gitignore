@@ -1,1 +1,10 @@
 spark-store.pro.user*
+
+# Xmake cache
+.xmake/
+build/
+
+# MacOS Cache
+.DS_Store
+
+

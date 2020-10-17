@@ -6,7 +6,7 @@
 #include <QFile>
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
-#include <downloadlist.h>
+#include "downloadlist.h"
 #include <QJsonObject>
 #include <QProcess>
 #include <QFuture>
