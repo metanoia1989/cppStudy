@@ -463,6 +463,9 @@ void Widget::updatefoot()
     ui->webfoot->setFixedHeight(allh-foot);
 }
 
+/**
+ * 已弃用，原来是使用 QtConcurrent::run 加载，现在使用单独的线程类来加载
+ */
 int Widget::loadappinfo(QUrl arg1)
 {
     if(arg1.isEmpty()){

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1053</width>
-    <height>674</height>
+    <height>697</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -333,11 +333,11 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QWebEngineView" name="webEngineView">
+        <widget class="QWebEngineView" name="webEngineView" native="true">
          <property name="contextMenuPolicy">
           <enum>Qt::DefaultContextMenu</enum>
          </property>
-         <property name="url">
+         <property name="url" stdset="0">
           <url>
            <string>about:blank</string>
           </url>
@@ -457,8 +457,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>903</width>
-            <height>849</height>
+            <width>886</width>
+            <height>865</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -952,8 +952,8 @@
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>869</width>
-                   <height>325</height>
+                   <width>840</width>
+                   <height>318</height>
                   </rect>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -1082,8 +1082,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>738</width>
-            <height>896</height>
+            <width>886</width>
+            <height>921</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_23">
