@@ -6,7 +6,6 @@
 #include <QFile>
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
-#include "downloadlist.h"
 #include <QJsonObject>
 #include <QProcess>
 #include <QFuture>
@@ -20,9 +19,10 @@
 #include <QLabel>
 #include <DTitlebar>
 #include <DSearchEdit>
-#include <progressload.h>
+#include "progressload.h"
 #include "workerthreads.h"
 #include "image_show.h"
+#include "downloadlist.h"
 
 #define LIST_MAX 99 //一次最多下载数量
 #define TMP_PATH "/tmp/spark-store"
