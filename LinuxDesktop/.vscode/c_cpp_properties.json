@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}",
+                "/home/metanoia1989/Qt/5.15.1/gcc_64/include/**",
+                "/usr/include/**",
+                "/usr/include/libdtk-5.2.2/**",
+                "/usr/include/libdtk-5.2.1/DGui/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
