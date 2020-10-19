@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
     initgraph(640, 480);     
     
     MOUSEMSG m; // 定义鼠标消息
-    
+
     while (true)
     {
         // 获取一条鼠标消息    

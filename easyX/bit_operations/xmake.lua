@@ -48,10 +48,7 @@ elseif has_config("home") then
     add_options("home")
 end
 
-target("contrail")
+target("color")
     set_kind("binary")
-    add_files("contrail.cpp")
+    add_files("bit_color.cpp")
 
-target("triangle")
-    set_kind("binary")
-    add_files("triangle.cpp")
