@@ -9,3 +9,5 @@ DataStructure/
 DesignPattern/
 cmake-build**/
 .vs/
+
+build-*/
