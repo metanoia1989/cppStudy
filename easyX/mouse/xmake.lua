@@ -37,9 +37,10 @@ option("home")
 option_end()
 
 add_defines("UNICODE")
--- add_links("EasyXw")
-add_links("EasyXa")
+add_links("EasyXw")
+-- add_links("EasyXa")
 add_links("Gdi32", "User32", "shell32", "Ole32")
+set_languages("c17", "cxx17");
 
 
 if has_config("company") then
