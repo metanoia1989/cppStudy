@@ -2,61 +2,21 @@
 #include <stdlib.h>
 #include <windows.h>
 
-
 /**
  * 任意角度移动的球，碰到边界后任意角度反弹
  */ 
 int main(int argc, char const *argv[])
 {
-    initgraph(640, 480);
+    initgraph(600, 600);
     
-    int x = 0;
-    int direction = true; // true为正向、false为反向
+    int x = 300;
+    int y = 300;
+    int degree = 0;
+    const int step = 10;
     while (true)
     {
-        if (x > 480) {
-            direction = false;
-            x = 480;
-        }
-        if (x < 0) {
-            direction = true;
-            x = 0;
-        }
-        if (x <= 480 && x >= 0 ) {
-            if (direction) {
-                x += 10;
-            } else {
-                x -= 10;
-            }
-        } else {
-            continue;
-        }
-
-        // 绘制黄线、绿色填充的圆
-        setlinecolor(YELLOW);
-        setfillcolor(GREEN);
-        fillcircle(x, x, 30); 
-        Sleep(50);
-        // 绘制黑线、黑色填充的圆，抹掉之前的
-        setlinecolor(BLACK);
-        setfillcolor(BLACK);
-        fillcircle(x, x, 30); 
-
-    }
-    
-    for (int x = 100; x < 540; x+=20) 
-    {
-        // 绘制黄线、绿色填充的圆
-        setlinecolor(YELLOW);
-        setfillcolor(GREEN);
-        fillcircle(x, 100, 20); 
-
-        Sleep(500);
-
-        // 绘制黑线、黑色填充的圆，抹掉之前的
-        setlinecolor(BLACK);
-        setfillcolor(BLACK);
-        fillcircle(x, 100, 20); 
+        degree = rand() % 360;
+        x += step gg
     }
     
     system("pause");
