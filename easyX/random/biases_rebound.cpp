@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <math.h>
+#include <time.h>
 #include <utility>
 
 /**
@@ -12,6 +13,7 @@ int main(int argc, char const *argv[])
     initgraph(600, 600);
     setwritemode(R2_XORPEN); // XOR绘图模式
     
+    srand(time(NULL));
 
     setlinecolor(YELLOW); // 黄线
     setfillcolor(GREEN); // 绿色填充
