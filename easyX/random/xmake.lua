@@ -41,6 +41,7 @@ option_end()
 add_links("EasyXa")
 add_links("Gdi32", "User32", "shell32", "Ole32")
 
+set_languages("c11", "cxx17")
 
 if has_config("company") then
     add_options("company")
@@ -55,3 +56,7 @@ target("number")
 target("color")
     set_kind("binary")
     add_files("random_color.cpp")
+
+target("biases")
+    set_kind("binary")
+    add_files("biases_rebound.cpp")
