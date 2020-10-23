@@ -56,3 +56,7 @@ target("triangle")
 target("repeat")
     set_kind("binary")
     add_files("repeat.cpp")
+
+target("point")
+    set_kind("binary")
+    add_files("random_point.cpp")
