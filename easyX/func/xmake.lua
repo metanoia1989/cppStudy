@@ -36,12 +36,12 @@ option("home")
     )
 option_end()
 
--- add_defines("UNICODE")
--- add_links("EasyXw")
-add_links("EasyXa")
+add_defines("UNICODE")
+add_links("EasyXw")
+-- add_links("EasyXa")
 add_links("Gdi32", "User32", "shell32", "Ole32")
+set_languages("c17", "cxx17");
 
-set_languages("c11", "cxx17")
 
 if has_config("company") then
     add_options("company")
@@ -49,14 +49,14 @@ elseif has_config("home") then
     add_options("home")
 end
 
-target("number")
+target("triangle")
     set_kind("binary")
-    add_files("random_number.cpp")
+    add_files("triangle.cpp")
 
-target("color")
+target("repeat")
     set_kind("binary")
-    add_files("random_color.cpp")
+    add_files("repeat.cpp")
 
-target("biases")
+target("point")
     set_kind("binary")
-    add_files("biases_rebound.cpp")
+    add_files("random_point.cpp")
