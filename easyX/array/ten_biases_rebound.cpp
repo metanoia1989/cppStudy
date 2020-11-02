@@ -3,7 +3,7 @@
 #include <windows.h>
 
 /**
- * 任意角度移动的球，碰到边界后任意角度反弹
+ * 10个任意角度移动的球，碰到边界后任意角度反弹
  */ 
 int main(int argc, char const *argv[])
 {
