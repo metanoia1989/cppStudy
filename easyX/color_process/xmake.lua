@@ -1,4 +1,5 @@
 add_rules("mode.debug", "mode.release")
+set_languages("c99", "c++17")
 
 option("company")
     set_default(false)
@@ -37,10 +38,10 @@ option("home")
 option_end()
 
 add_defines("UNICODE")
+add_defines("_UNICODE")
 add_links("EasyXw")
 -- add_links("EasyXa")
 add_links("Gdi32", "User32", "shell32", "Ole32")
-
 
 if has_config("company") then
     add_options("company")
@@ -48,14 +49,16 @@ elseif has_config("home") then
     add_options("home")
 end
 
-target("title")
+target("red")
     set_kind("binary")
-    add_files("set_window_title.cpp")
-
-target("line")
-    set_kind("binary")
-    add_files("draw_line.cpp")
-
-target("image")
-    set_kind("binary")
-    add_files("image_gdi.cpp")
+    add_files("wipe_off_red.cpp")
+    after_build(function (target)
+        local full_path = target:targetfile()
+        local dir_path = string.gsub(full_path, "(.*[/|\\])(.*)", "%1")
+        os.cp("$(projectdir)/*.jpg", dir_path)
+    end)
+    on_clean(function (target) 
+        local full_path = target:targetfile()
+        local dir_path = string.gsub(full_path, "(.*[/|\\])(.*)", "%1")
+        os.rm(string.format("%s*.jpg", dir_path))
+    end)

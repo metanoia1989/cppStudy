@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
     // 获取窗口句柄
     HWND hwnd = GetHWnd();
     // 设置窗口标题文字
-    SetWindowText(hwnd, L"Hello World 哈喽沃尔德！");
+    SetWindowText(hwnd, _T(L"Hello World 哈喽沃尔德！"));
     
     system("pause");
     closegraph();
