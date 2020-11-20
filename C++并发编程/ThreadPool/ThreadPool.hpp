@@ -12,9 +12,9 @@ class Task
 {
 public:
     template<typename Func, typename ...Args>
-    Task(Func f, Args ...args)
+    Task(Func&& f, Args&& ...args)
     {
-        func = std::bind(f, std::forward<Args>(args)...);
+        func = std::bind(std::forward<Func>(f), std::forward<Args>(args)...);
     }
 
     void run()
@@ -46,11 +46,15 @@ public:
     }
     ~ThreadPool()
     {
-        std::cout << "测试输出" << std::endl;
+    {
+        std::unique_lock<std::mutex> lock(m_mutex);
         is_running = false; // 线程池即将要销毁停止工作了
-        for (int i = 0; i < threads.size(); i++) {
-            threads[i]->join();
-            delete threads[i];
+    }
+        m_cond.notify_all();
+        for(auto &worker : threads) {
+            worker->join();
+            delete worker;
+            worker = nullptr;
         }
     }
     
@@ -63,8 +67,10 @@ public:
         while (is_running) {
             Task *t = getOneTask();
             if (t == nullptr) {
-                std::cout << "调用了个寂寞" << std::endl;
+                std::cout << "获取任务失败 调用了个寂寞" << std::endl;
                 return;
+            } else {
+                std::cout << "拿到了任务，耶耶耶" << std::endl;
             }
             t->run();
         }
@@ -72,24 +78,31 @@ public:
     
     Task *getOneTask()
     {
-        // 进入线程临界区时加锁
-        std::unique_lock<std::mutex> lock(m_mutex);
-        // 等待任务
-        while (is_running && tasks.empty())
-            m_cond.wait(lock);
-        // 取任务
-        Task *t = nullptr; 
-        if (is_running) {
-            t = tasks.front();
-            tasks.pop();
+        {
+            // 进入线程临界区时加锁
+            std::unique_lock<std::mutex> lock(m_mutex); 
+            // 等待任务
+            m_cond.wait(lock, [this](){
+                return is_running && tasks.empty();
+            });
+            Task *t = nullptr; 
+            if (is_running) {
+                t = tasks.front();
+                tasks.pop();
+            }
+            return t;
         }
-        return t;
     }
     
     void addOneTask(Task *t)
     {
         std::unique_lock<std::mutex> lock(m_mutex); 
+        // 线程池停止，不允许再添加新的任务
+        if (!is_running) { 
+            return;
+        }
         tasks.push(t);
+        std::cout << "添加任务成功！";
         m_cond.notify_one();
     }
 
