@@ -1,10 +1,13 @@
 #include "ThreadPool.hpp"
 #include <iostream>
+#include <mutex>
+
+std::mutex out_mutex;
 
 void func(int a, int b)
 {
+    std::unique_lock<std::mutex> lock(out_mutex);
     std::cout << a << "+" << b << "=" << a + b << std::endl; 
-    return;
 }
 
 /**
@@ -15,10 +18,11 @@ int main(int argc, char const *argv[])
 {
     std::cout << "测试输出！" << std::endl;
     ThreadPool<> pool(5);
-    Task t1(func, 3, 4), t2(func, 5, 6);
-    
-    pool.addOneTask(&t1);
-    pool.addOneTask(&t2);
-
+    for (size_t i = 0; i < 1000; i++)
+    {
+        Task t(func, i, i);
+        pool.addOneTask(t);
+    }
+    pool.print(); 
     return 0;
 }

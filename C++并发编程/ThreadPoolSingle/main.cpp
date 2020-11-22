@@ -8,7 +8,6 @@ void func(int a, int b)
 {
     std::unique_lock<std::mutex> lock(out_mutex);
     std::cout << a << "+" << b << "=" << a + b << std::endl; 
-    return;
 }
 
 int main(int argc, char const *argv[])

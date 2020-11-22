@@ -9,6 +9,7 @@
 #include <future>
 #include <functional>
 #include <stdexcept>
+#include <iostream>
 
 class ThreadPool
 {
@@ -64,6 +65,7 @@ ThreadPool::~ThreadPool()
         std::unique_lock<std::mutex> lock(queue_mutex);
         stop = true;
     }
+    std::cout << tasks.size() << std::endl;
     condition.notify_all();
     for(std::thread& worker : workers)
         worker.join();
