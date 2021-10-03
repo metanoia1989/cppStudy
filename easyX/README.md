@@ -14,8 +14,10 @@ vistual studio太笨重了，我不想用。使用msvc+xmake进行编译，配�
 这个库的版本太久了，Ubuntu21.04已经无法编译通过了，只能使用docker了。
 
 ```sh
-$ docker build . -name libgraph 
-$ docker run -d -v $(pwd):/easyX easyX
+$ docker build -t libgraph .
+$ docker run -d -t -v $(pwd):/easyX --name easyX libgraph
+$ docker exec -it easyX /bin/bash
+$ gcc -o test test.c -lgraph
 ```
 
 
