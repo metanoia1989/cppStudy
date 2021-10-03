@@ -1,6 +1,10 @@
 #include <graphics.h>
 #include <stdlib.h>
+#ifdef __unix__
+#define Sleep delay
+#elif defined(_WIN32) || defined(WIN32)
 #include <windows.h>
+#endif
 
 
 /**

@@ -12,7 +12,7 @@ int main()
    ellipse(x, y + 200, 0, 360, 100, 50);
    outtextxy(left + 100, top + 325, "C Graphics Program");
 
-   delay(5000);
+   delay(15000);
    closegraph();
    return 0;
 }
