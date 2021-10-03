@@ -1,4 +1,4 @@
-# easyX 库使用
+# 一、easyX 库使用
 这个项目是使用easyX库的例子。easyX库依赖msvc编译链，并且只提供msvc编译好的`.lib`静态库文件。        
 vistual studio太笨重了，我不想用。使用msvc+xmake进行编译，配置好了include和linkdir，就开始编译。        
 期间有不少`.lib`没有手动链接导致编译失败，根据错误信息网上搜一个个找到要链接的静态库名字，编译通过。    
@@ -8,7 +8,18 @@ vistual studio太笨重了，我不想用。使用msvc+xmake进行编译，配�
 
 编译这个easyX必须要msvc编译器，刚才犯傻配置了 `xmake f -p mingw` =_= 编译了半天，最后还报错。   
 
-# API函数
+
+## 1.1 Linux 上使用libgraph
+
+这个库的版本太久了，Ubuntu21.04已经无法编译通过了，只能使用docker了。
+
+```sh
+$ docker build . -name libgraph 
+$ docker run -d -v $(pwd):/easyX easyX
+```
+
+
+# 二、API函数
 [初始化函数]        
 initgraph(width, height)        
 closegraph()        
@@ -50,7 +61,7 @@ r / g / b 分别表示红色、绿色、蓝色，范围都是 0~255。例如，R
 [延时语句]  
 这个很简单，Sleep(n) 就可以表示 n 毫秒的延时。例如延时 3 秒，可以用 Sleep(3000);        
 
-# 扩展作业
+# 三、扩展作业
 [for循环的]     
 1. 画围棋棋盘
 2. 画中国象棋的棋盘
