@@ -9,18 +9,6 @@ vistual studio太笨重了，我不想用。使用msvc+xmake进行编译，配�
 编译这个easyX必须要msvc编译器，刚才犯傻配置了 `xmake f -p mingw` =_= 编译了半天，最后还报错。   
 
 
-## 1.1 Linux 上使用libgraph
-
-这个库的版本太久了，Ubuntu21.04已经无法编译通过了，只能使用docker了。
-
-```sh
-$ docker build -t libgraph .
-$ docker run -d -t -v $(pwd):/easyX --name easyX libgraph
-$ docker exec -it easyX /bin/bash
-$ gcc -o test test.c -lgraph
-```
-
-
 # 二、API函数
 [初始化函数]        
 initgraph(width, height)        
