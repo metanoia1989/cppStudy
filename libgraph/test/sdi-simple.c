@@ -24,6 +24,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "graphics.h"
+#if __EMSCRIPTEN__
+#include <emscripten/emscripten.h>
+#endif
 
 int i, stop, maxx, maxy;
 
@@ -57,7 +60,7 @@ void message (char *str)
   settextstyle (DEFAULT_FONT, HORIZ_DIR, 1);
   setcolor (YELLOW);
   outtextxy (maxx / 2, maxy - 20, "Press a key to continue");
-  mainloop();
+  getevent();
   cleardevice ();
   settextjustify (LEFT_TEXT, TOP_TEXT);
 
@@ -163,7 +166,7 @@ int main (int argc, char *argv[])
   lines ();
   pixels ();
   
-  mainloop();
+  getevent();
   
   closegraph ();
   

@@ -4607,10 +4607,9 @@ int getevent (void)
   SDL_Event event;
 
   // wait for an event
-  // while (1) { } // while (1)
+  while (1) { 
 
     while (SDL_PollEvent(&event))
-      printf("有监听到事件哦！！\n");
       switch (event.type) {
 
       case SDL_WINDOWEVENT:
@@ -4660,19 +4659,16 @@ int getevent (void)
         ;
 
       } // switch (event.type)
+      
+    #ifdef __EMSCRIPTEN__
+    emscripten_sleep(16);
+    #else
+    SDL_Delay(16);
+    #endif
+  } // while (1)
 
 } // getevent ()
 
-void mainloop() {
-  #if __EMSCRIPTEN__
-  emscripten_set_main_loop(getevent, -1, 1);
-  #else
-  while (bgi_last_event != QUIT)
-  {
-    getevent();
-  }
-  #endif
-}
 
 // -----
 

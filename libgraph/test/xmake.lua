@@ -13,6 +13,7 @@ target("sdi-simple")
         "-gsource-map", 
         "-s USE_SDL=2",
         "-pthread", 
-        "-s USE_PTHREADS=1 -s PTHREAD_POOL_SIZE=4 -s ALLOW_MEMORY_GROWTH=1"
+        "-s USE_PTHREADS=1 -s PTHREAD_POOL_SIZE=4 -s ALLOW_MEMORY_GROWTH=1",
+        "-s ASYNCIFY"
     )
     add_deps("libSDL_bgi")

@@ -349,7 +349,11 @@ int kbhit(void)
       {
 	if ((event.type == SDL_ACTIVEEVENT) &&(event.active.state == SDL_APPINPUTFOCUS) && event.active.gain)
 	  refresh_interrupt(0);
+  #ifdef __EMSCRIPTEN__
+  emscripten_sleep(100);
+  #else
 	SDL_Delay(100);
+  #endif
 	return(0);
       }
     }
