@@ -35,6 +35,10 @@ freely, subject to the following restrictions:
 
 #include "SDL_bgi.h"
 
+#if __EMSCRIPTEN__
+#include <emscripten/emscripten.h>
+#endif
+
 // Fonts
 
 #include "fonts/trip.h"    // TRIPLEX_FONT
@@ -4603,10 +4607,10 @@ int getevent (void)
   SDL_Event event;
 
   // wait for an event
-  while (1) {
+  // while (1) { } // while (1)
 
-    while (SDL_WaitEvent (&event))
-
+    while (SDL_PollEvent(&event))
+      printf("有监听到事件哦！！\n");
       switch (event.type) {
 
       case SDL_WINDOWEVENT:
@@ -4657,9 +4661,18 @@ int getevent (void)
 
       } // switch (event.type)
 
-  } // while (1)
-
 } // getevent ()
+
+void mainloop() {
+  #if __EMSCRIPTEN__
+  emscripten_set_main_loop(getevent, -1, 1);
+  #else
+  while (bgi_last_event != QUIT)
+  {
+    getevent();
+  }
+  #endif
+}
 
 // -----
 

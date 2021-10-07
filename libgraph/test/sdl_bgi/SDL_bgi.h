@@ -464,6 +464,7 @@ void getbuffer (Uint32 *);
 int  getcurrentwindow (void);
 void getleftclick (void);
 int  getevent (void);
+void  mainloop(void);
 void getlinebuffer (int, Uint32 *);
 int  getmaxheight (void);
 int  getmaxwidth (void);

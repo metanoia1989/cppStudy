@@ -25,3 +25,5 @@ LDFLAGS="$LDFLAGS $(pkg-config --libs guile-2.2)" \
 $ make && sudo make install
 $ sudo cp /usr/local/lib/libgraph.* /usr/lib 
 ```
+
+really fast haha  

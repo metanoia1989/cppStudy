@@ -57,7 +57,7 @@ void message (char *str)
   settextstyle (DEFAULT_FONT, HORIZ_DIR, 1);
   setcolor (YELLOW);
   outtextxy (maxx / 2, maxy - 20, "Press a key to continue");
-  getevent ();
+  mainloop();
   cleardevice ();
   settextjustify (LEFT_TEXT, TOP_TEXT);
 
@@ -163,7 +163,8 @@ int main (int argc, char *argv[])
   lines ();
   pixels ();
   
-  // getevent ();
+  mainloop();
+  
   closegraph ();
   
 }
