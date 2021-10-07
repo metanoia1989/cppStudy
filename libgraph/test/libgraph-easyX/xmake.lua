@@ -1,0 +1,6 @@
+target('libgraph-static')
+    add_defines("FONTDIR='\"$(scriptdir)/Font\"'")
+    set_kind("static")
+    add_headerfiles("graphics.h", "config.h", "grtext.h", "polygon.h", "shapes.h")
+    add_includedirs(".", {interface = true})
+    add_files("libgraph.c", "polygon.c", "shapes.c", "text.c")
